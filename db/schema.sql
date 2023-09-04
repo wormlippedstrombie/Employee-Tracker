@@ -24,3 +24,8 @@ CREATE TABLE employee (
     FOREIGN KEY (role_id) REFERENCES role(id),
     FOREIGN KEY (manager_id) REFERENCES employee(id)
 );
+
+ALTER TABLE employee
+ADD COLUMN role_name VARCHAR(255),
+ADD COLUMN manager_name VARCHAR(255),
+ADD COLUMN department_name VARCHAR(255);

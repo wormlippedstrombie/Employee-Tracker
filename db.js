@@ -1,4 +1,5 @@
-const mysql = require('mysql12');
+const mysql = require('mysql2');
+const express = require('express');
 const util = require('util');
 
 const PORT = process.env.PORT || 3001;
@@ -23,6 +24,8 @@ db.connect((err) => {
     if (err) throw err;
     console.log('Connected to the database');
 });
+
+
 
 module.exports = {
     queryAsync,
