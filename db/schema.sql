@@ -17,15 +17,13 @@ CREATE TABLE role (
 
 CREATE TABLE employee (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(30),
-    last_name VARCHAR(30),
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
     role_id INT,
     manager_id INT,
-    FOREIGN KEY (role_id) REFERENCES role(id),
-    FOREIGN KEY (manager_id) REFERENCES employee(id)
+    salary DECIMAL(10, 2),
+    role_name VARCHAR(255),       
+    manager_name VARCHAR(255),    
+    department_name VARCHAR(255)  
 );
 
-ALTER TABLE employee
-ADD COLUMN role_name VARCHAR(255),
-ADD COLUMN manager_name VARCHAR(255),
-ADD COLUMN department_name VARCHAR(255);
